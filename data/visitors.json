@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1781678580107",
+    "name": "Local Test",
+    "phone": "555-5555",
+    "purpose": "Testing local DB",
+    "personToMeet": "System",
+    "vehicleNumber": "XYZ",
+    "vehicleType": "car",
+    "entryTime": "12:13 pm",
+    "exitTime": null,
+    "status": "Inside"
+  }
+]

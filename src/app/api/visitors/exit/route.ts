@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Visitor ID missing" }, { status: 400 });
     }
 
-    const exitTime = "'" + new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true });
+    const exitTime = "'" + new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", minute: "2-digit", hour12: true });
 
     // Send the exit command to the Apps Script Web App
     const response = await fetch(SCRIPT_URL, {

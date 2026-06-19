@@ -53,7 +53,8 @@ export async function POST(request: Request) {
       ...body,
       id: visitorId,
       enteredBy: body.enteredBy,
-      createdAt: body.createdAt || new Date().toLocaleString("en-US", {
+      createdAt: body.createdAt || new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
         day: "numeric",
         month: "short",
         year: "numeric",
@@ -61,7 +62,7 @@ export async function POST(request: Request) {
         minute: "2-digit",
         hour12: true
       }),
-      entryTime: body.entryTime ? ("'" + body.entryTime.replace(/^'/, "")) : ("'" + new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })),
+      entryTime: body.entryTime ? ("'" + body.entryTime.replace(/^'/, "")) : ("'" + new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true })),
       exitTime: body.exitTime || "",
       status: body.status || "Inside",
     };

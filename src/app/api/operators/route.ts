@@ -46,6 +46,7 @@ export async function POST(request: Request) {
       phone: (phone ?? "").trim(),
       email: (email ?? "").trim(),
       createdAt: new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
         day: "numeric",
         month: "short",
         year: "numeric",
